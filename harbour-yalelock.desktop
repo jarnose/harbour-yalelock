@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-yalelock
+Exec=harbour-yalelock
+Name=Yale Lock
+
+[X-Sailjail]
+OrganizationName=io.github.jarnose
+ApplicationName=yalelock
+# Bluetooth: the lock, through BlueZ over the system bus - this is the only
+# way the app talks to the lock. No cloud login, no Internet permission: v1
+# is BLE-only (see README.md's "Scope" section).
+# Secrets: each lock's offline handshake key, in the Sailfish Secrets vault
+# (never written to plain disk).
+Permissions=Bluetooth;Secrets
