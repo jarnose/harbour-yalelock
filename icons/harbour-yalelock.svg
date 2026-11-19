@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  harbour-yalelock launcher icon, following the Sailfish OS app icon system
+  (sailfishos.org/design/icons/ -> "Apps icon story" PDF):
+    - 86x86 canvas, shape inset 0.3px per side (85.4px effective) for a
+      clean anti-aliased edge, no further padding.
+    - one of the 16 base shapes built from a square + circle merge: here,
+      both top corners rounded to a full semicircle (r = 85.4/2) and both
+      bottom corners square - an "arch"/dome shape, chosen because a
+      padlock's shackle is itself an arch.
+    - vibrant diagonal two-stop gradient fill (not flat color).
+    - a simple flat white glyph (padlock) centered in the inset safe area,
+      with one small accent detail (the keyhole) rather than a literal/
+      detailed illustration.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
+  <defs>
+    <linearGradient id="base" x1="8" y1="4" x2="78" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5AC8FA"/>
+      <stop offset="1" stop-color="#0D4F8B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- base shape: arch (both top corners fully rounded, bottom corners square) -->
+  <path fill="url(#base)" d="
+    M 0.3,43
+    A 42.7,42.7 0 0 1 43,0.3
+    A 42.7,42.7 0 0 1 85.7,43
+    L 85.7,85.7
+    L 0.3,85.7
+    Z"/>
+
+  <!-- padlock glyph, flat white, centered in the inset safe area -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"
+        d="M 29,48 L 29,41 A 14,14 0 0 1 57,41 L 57,48"/>
+  <rect x="26" y="41" width="34" height="27" rx="6" fill="#FFFFFF"/>
+  <circle cx="43" cy="52" r="3.4" fill="url(#base)"/>
+  <path d="M 41.5,54 L 44.5,54 L 43.6,60 L 42.4,60 Z" fill="url(#base)"/>
+</svg>
